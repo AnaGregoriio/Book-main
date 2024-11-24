@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Configurações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Avatar do Usuário -->
+  <ion-item lines="none">
+    <ion-avatar slot="start">
+      <img src="assets/avatar.png" alt="Avatar do Usuário" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ username }}</h2>
+      <p>{{ email }}</p>
+    </ion-label>
+    <ion-icon
+      name="create-outline"
+      slot="end"
+      routerLink="/edit-profile"
+      routerDirection="forward"
+    ></ion-icon>
+  </ion-item>
+
+
+  <!-- Lista de Configurações -->
+  <ion-list>
+    <!-- Editar Perfil -->
+    <ion-item routerLink="/edit-profile" routerDirection="forward" lines="full">
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+      <ion-label>Editar Perfil</ion-label>
+    </ion-item>
+
+    <!-- Trocar Senha -->
+    <ion-item routerLink="/change-password" routerDirection="forward" lines="full">
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-label>Trocar Senha</ion-label>
+    </ion-item>
+
+    <!-- Sair do App -->
+    <ion-item (click)="logout()" lines="full">
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      <ion-label>Sair do App</ion-label>
+    </ion-item>
+
+    <!-- Excluir Conta -->
+    <ion-item (click)="deleteAccount()" lines="full">
+      <ion-icon slot="start" name="trash-outline"></ion-icon>
+      <ion-label>Excluir Conta</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- Tabs na parte inferior -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" routerLink="/home" routerDirection="root">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="search" routerLink="/search" routerDirection="root">
+      <ion-icon name="search-outline"></ion-icon>
+      <ion-label>Buscar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="library" routerLink="/library" routerDirection="root">
+      <ion-icon name="library-outline"></ion-icon>
+      <ion-label>Biblioteca</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="pdf-viewer" routerLink="/pdf-viewer" routerDirection="root">
+      <ion-icon name="document-outline"></ion-icon>
+      <ion-label>Livros PDF</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

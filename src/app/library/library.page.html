@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Biblioteca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Indicador de carregamento -->
+  <ion-spinner *ngIf="isLoading" name="crescent" class="loading-spinner"></ion-spinner>
+
+  <!-- Exibição do PDF selecionado -->
+  <div *ngIf="selectedPdf" class="pdf-viewer">
+    <h2>{{ selectedPdf.name }}</h2>
+    <iframe
+      *ngIf="selectedPdf.url"
+      [src]="selectedPdf.url"
+      width="100%"
+      height="500px"
+      style="border: none;"
+    ></iframe>
+    <ion-button color="primary" expand="block" (click)="closePdf()">
+      Fechar PDF
+    </ion-button>
+  </div>
+
+  <!-- Lista de PDFs -->
+  <ion-grid *ngIf="!selectedPdf && library && library.length > 0">
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let pdf of library">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ pdf.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button color="primary" expand="block" (click)="openPdf(pdf)">
+              Abrir PDF
+            </ion-button>
+            <ion-button color="danger" expand="block" *ngIf="pdf.id" (click)="removeFromLibrary(pdf.id)">
+              Remover
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Mensagem quando não há PDFs na biblioteca -->
+  <div *ngIf="!isLoading && (!library || library.length === 0)" class="empty-message">
+    <p>Nenhum PDF disponível na biblioteca.</p>
+  </div>
+
+  <!-- Botão Flutuante para Adicionar PDF -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="selectFile()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

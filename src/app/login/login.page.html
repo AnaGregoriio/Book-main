@@ -1,0 +1,47 @@
+<ion-content class="login-content">
+  <!-- Parte Superior com o fundo verde e logo -->
+  <div class="top-container">
+    <img src="assets/WhatsApp Image 2024-10-13 at 12.58.10 (1).jpeg" alt="Logo do app" class="logo">
+  </div>
+
+  <!-- Formulário de login -->
+  <div class="login-form">
+    <ion-item class="input-item">
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input [(ngModel)]="username" type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input [(ngModel)]="password" [type]="passwordVisible ? 'text' : 'password'" required></ion-input>
+      <ion-icon name="eye-outline" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+    </ion-item>
+
+    <ion-button expand="full" (click)="login()" class="login-button">Iniciar Sessão</ion-button>
+  </div>
+
+  <!-- Divisória para login com Google -->
+  <div class="divider">
+    <span></span>
+    <p>ou</p>
+    <span></span>
+  </div>
+
+  <!-- Login com Google -->
+  <div class="google-login">
+    <ion-button expand="full" color="light" (click)="loginWithGoogle()">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Entrar com Google
+    </ion-button>
+  </div>
+
+  <div class="facebook-login">
+    <ion-button expand="full" color="light" (click)="loginWithFacebook()">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      Entrar com Facebook
+    </ion-button>
+  </div>
+
+  <ion-button expand="full" color="light" (click)="goToRegister()">Criar conta? Registra-se</ion-button>
+
+</ion-content>

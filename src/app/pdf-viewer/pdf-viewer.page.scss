@@ -1,0 +1,43 @@
+
+ion-fab-button {
+  --background: #5ccfb3; /* Cor de fundo */
+  --color: #ffffff; /* Cor do ícone */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+.loading-spinner {
+  display: block;
+  margin: 20px auto;
+}
+
+ion-card-title.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ion-button {
+  margin: 5px 0;
+}
+.loading-spinner {
+  display: block;
+  margin: 20px auto;
+}
+
+ion-card-title.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px; /* Texto menor */
+}
+
+ion-row.action-buttons {
+  margin-top: 10px;
+}
+
+ion-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  font-size: 12px; /* Texto menor */
+}

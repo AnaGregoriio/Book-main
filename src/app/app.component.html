@@ -1,0 +1,53 @@
+<ion-app>
+  <!-- Menu Lateral -->
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Bem-vindo!</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Home -->
+        <ion-item routerLink="/tabs/home" routerDirection="root" (click)="closeMenu()">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+
+        <!-- Pesquisar -->
+        <ion-item routerLink="/tabs/search" routerDirection="root" (click)="closeMenu()">
+          <ion-icon slot="start" name="search-outline"></ion-icon>
+          <ion-label>Pesquisar</ion-label>
+        </ion-item>
+
+        <!-- Biblioteca -->
+        <ion-item routerLink="/tabs/library" routerDirection="root" (click)="closeMenu()">
+          <ion-icon slot="start" name="library-outline"></ion-icon>
+          <ion-label>Biblioteca</ion-label>
+        </ion-item>
+
+        <!-- Configurações -->
+        <ion-item routerLink="/settings" routerDirection="root" (click)="closeMenu()">
+          <ion-icon slot="start" name="settings-outline"></ion-icon>
+          <ion-label>Configurações</ion-label>
+        </ion-item>
+
+        <!-- Fechar Menu -->
+        <ion-item (click)="closeMenu()">
+          <ion-icon slot="start" name="close-outline"></ion-icon>
+          <ion-label>Fechar Menu</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <ion-footer>
+      <!-- Botão de Logout -->
+      <ion-item (click)="logout()">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-footer>
+  </ion-menu>
+
+  <!-- Conteúdo Principal -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

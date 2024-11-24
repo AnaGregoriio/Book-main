@@ -1,0 +1,87 @@
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+.top-container {
+  background-color: #56E4B5; /* Cor verde do topo */
+  height: 200px; /* Altura do container do topo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 50px; /* Bordas arredondadas */
+  border-bottom-right-radius: 50px;
+}
+
+.top-container .logo {
+  width: 200px; /* Largura do logo */
+  height: auto; /* Altura automática para manter proporção */
+}
+
+.login-form {
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 400px; /* Largura máxima do formulário */
+  padding: 20px; /* Preenchimento do formulário */
+}
+
+.input-item {
+  --highlight-color-focused: #56E4B5; /* Cor de destaque */
+  --background: transparent; /* Fundo transparente */
+  --placeholder-color: #aaa; /* Cor do placeholder */
+  --color: #000; /* Cor do texto */
+  border-bottom: 1px solid #000; /* Borda inferior do input */
+}
+
+.login-button {
+
+  color: white; /* Cor do texto do botão */
+  margin-top: 20px; /* Margem acima do botão */
+  padding: 10px 20px; /* Preenchimento do botão */
+  border-radius: 30px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; /* Margens em cima e embaixo */
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc; /* Cor da linha divisória */
+}
+
+.divider p {
+  margin: 0 10px; /* Margens do texto central */
+  color: #aaa; /* Cor do texto central */
+}
+
+.google-login {
+  display: flex;
+  justify-content: center; /* Centraliza o ícone */
+  margin: 20px 0; /* Margem em cima e embaixo */
+}
+
+.google-login ion-icon {
+  font-size: 40px; /* Tamanho do ícone do Google */
+  color: #56E4B5; /* Cor do ícone do Google */
+}
+
+.facebook-login {
+  display: flex;
+  justify-content: center; /* Centraliza o ícone */
+  margin: 20px 0; /* Margem em cima e embaixo */
+}
+
+.facebook-login ion-icon {
+  font-size: 40px; /* Tamanho do ícone do Facebook */
+  color: #56E4B5; /* Cor do ícone do Facebok */
+}

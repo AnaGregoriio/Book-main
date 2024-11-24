@@ -1,0 +1,44 @@
+.custom-card {
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+ion-card-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+ion-card-content {
+  font-size: 14px;
+  color: #666;
+}
+
+ion-button {
+  margin-top: 10px;
+  --border-radius: 20px;
+}
+
+.page-content {
+  background-color: #5ccfb3;
+  color: white; /* Altere a cor do texto se necessário */
+}
+
+button {
+  background-color: #5ccfb3;
+  color: white;
+}

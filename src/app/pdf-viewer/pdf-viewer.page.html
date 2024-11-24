@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/library"></ion-back-button>
+    </ion-buttons>
+    <ion-title>PDF Disponível</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Indicador de carregamento -->
+  <ion-spinner *ngIf="isLoading" name="crescent" class="loading-spinner"></ion-spinner>
+
+  <!-- Mensagem de erro quando nenhum PDF está carregado -->
+  <ng-template #noPdf>
+    <div class="error-message">
+      <ion-icon name="alert-circle-outline" size="large"></ion-icon>
+      <p>Nenhum PDF encontrado ou selecionado.</p>
+    </div>
+  </ng-template>
+
+  <!-- Lista de PDFs carregados -->
+  <ion-grid *ngIf="pdfFiles && pdfFiles.length > 0">
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let pdf of pdfFiles">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="truncate">{{ pdf.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                <ion-button
+                  size="small"
+                  fill="outline"
+                  color="success"
+                  (click)="addToLibrary(pdf)"
+                >
+                  Adicionar
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Mensagem quando não há PDFs carregados -->
+  <div *ngIf="pdfFiles.length === 0 && !isLoading" class="empty-message">
+    <p>Nenhum PDF carregado do Firebase Storage.</p>
+  </div>
+</ion-content>

@@ -1,0 +1,58 @@
+.register-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.top-container {
+  background-color: #56E4B5;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.top-container img {
+  width: 200px;
+  height: auto;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.input-item {
+  --highlight-color-focused: #56E4B5;
+  --background: transparent;
+  --placeholder-color: #aaa;
+  --color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.register-button {
+  
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+
+ion-button[color="light"] {
+  margin-top: 10px;
+  color: #56E4B5;
+}
+
+ion-button[color="light"]:hover {
+  background-color: #f4f4f4;
+}

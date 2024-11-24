@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="saveProfile()">
+    <ion-item>
+      <ion-label position="floating">Novo Nome de Usuário</ion-label>
+      <ion-input [(ngModel)]="newUsername" name="newUsername" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nova Senha</ion-label>
+      <ion-input [(ngModel)]="newPassword" name="newPassword" type="password" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Salvar</ion-button>
+  </form>
+</ion-content>

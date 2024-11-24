@@ -1,0 +1,17 @@
+.loading-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .loading-container {
+    text-align: center;
+    color: #56E4B5;
+
+    .logo {
+      max-width: 300px;
+      margin-bottom: 20px;
+
+    }
+  }
+}

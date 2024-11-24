@@ -1,0 +1,32 @@
+ion-menu {
+  --background: #f4f4f4; /* Cor de fundo do menu */
+}
+
+ion-item {
+  --color: #000; /* Cor do texto */
+  --background: #fff; /* Cor de fundo do item */
+}
+
+ion-item.activated {
+  --background: #d4d4d4; /* Cor de fundo quando o item está ativado */
+}
+
+ion-toolbar {
+  --background: #5ccfb3; /* Cor de fundo da barra de ferramentas */
+  --color: white; /* Cor do texto na barra de ferramentas */
+}
+
+ion-avatar img {
+  border-radius: 50%; /* Tornar a imagem do avatar redonda */
+  width: 50px; /* Largura do avatar */
+  height: 50px; /* Altura do avatar */
+}
+
+.menu-icon {
+  color: #5ccfb3; /* Cor dos ícones do menu */
+}
+
+/* Estilos para os ícones ao serem ativados */
+ion-item .menu-icon.activated {
+  color: #ff5733; /* Cor dos ícones quando o item está ativado */
+}

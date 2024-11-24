@@ -1,0 +1,110 @@
+/* Estilo para o avatar */
+ion-avatar img {
+  border-radius: 50%; /* Arredonda o avatar */
+  width: 70px; /* Tamanho ajustado */
+  height: 70px;
+  border: 3px solid #56e4b5; /* Borda com a cor principal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo para os itens da lista */
+ion-item {
+  --inner-padding-end: 10px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  font-size: 16px;
+  --background: #fff; /* Fundo branco */
+  border-bottom: 1px solid #e0e0e0; /* Linha separadora */
+  transition: background-color 0.3s ease; /* Transição para hover */
+}
+
+/* Estilo para o título (nome do usuário) */
+ion-label h2 {
+  font-weight: bold;
+  font-size: 20px; /* Maior destaque */
+  margin: 0; /* Remove margens */
+  color: #56e4b5; /* Cor principal */
+}
+
+/* Estilo para subtítulos (como e-mails) */
+ion-label p {
+  margin: 4px 0 0; /* Espaçamento entre o título e subtítulo */
+  font-size: 14px;
+  color: #666; /* Cor secundária */
+}
+
+/* Estilo para os labels */
+ion-label {
+  color: #333; /* Cor do texto principal */
+}
+
+/* Estilo para os ícones */
+ion-icon {
+  font-size: 22px; /* Aumenta o tamanho do ícone */
+  color: #666; /* Cor do ícone */
+  transition: color 0.3s ease; /* Efeito suave de cor */
+}
+
+/* Ícone com hover */
+ion-icon:hover {
+  color: #56e4b5; /* Cor principal ao passar o mouse */
+}
+
+/* Estilo para o tab-bar */
+ion-tab-bar {
+  --background: #f8f8f8; /* Fundo claro */
+  --color: #666; /* Cor padrão dos ícones */
+  --color-selected: #56e4b5; /* Cor dos ícones selecionados */
+  border-top: 1px solid #e0e0e0; /* Linha no topo */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Sombra leve */
+}
+
+/* Estilo para os botões do tab-bar */
+ion-tab-button {
+  font-size: 14px; /* Tamanho do texto */
+  font-weight: 500; /* Peso do texto */
+}
+
+/* Adiciona espaçamento e ajuste no conteúdo */
+ion-content {
+  --padding-top: 10px;
+  --padding-bottom: 70px; /* Espaço para o tab-bar */
+  background-color: #f4f4f4; /* Fundo claro para o conteúdo */
+}
+
+/* Efeito hover para os itens da lista */
+ion-item:hover {
+  background-color: #f0f0f0; /* Fundo levemente cinza ao passar o mouse */
+}
+
+/* Adiciona estilo ao botão de edição */
+ion-icon[name="create-outline"] {
+  font-size: 20px;
+  color: #56e4b5;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Efeito de escala */
+}
+
+ion-icon[name="create-outline"]:hover {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Estilo responsivo para telas menores */
+@media screen and (max-width: 768px) {
+  ion-avatar img {
+    width: 50px;
+    height: 50px;
+  }
+
+  ion-label h2 {
+    font-size: 18px;
+  }
+
+  ion-label p {
+    font-size: 13px;
+  }
+
+  ion-tab-bar {
+    font-size: 12px;
+  }
+}

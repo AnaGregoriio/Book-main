@@ -1,0 +1,103 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+  --ion-color-primary: #5ccfb3;
+}
+
+ion-header {
+  --background: #56E4B5;
+}
+ion-button {
+  --background: #56E4B5;
+  --background-hover: #8a9693; /* Cor ao passar o mouse ou tocar */
+}
+
+ion-content {
+  --background: #ffffff; /* Defina a cor de fundo do conteúdo se necessário */
+}
+.menu-icon {
+  color: #56E4B5; /* Altere essa cor para a que você deseja */
+}
+
+ion-menu {
+  --background: #f4f4f4; /* Cor de fundo do menu */
+}
+
+ion-item {
+  --color: #000; /* Cor do texto */
+  --background: #fff; /* Cor de fundo do item */
+}
+
+ion-item.activated {
+  --background: #d4d4d4; /* Cor de fundo quando o item está ativado */
+}
+
+ion-toolbar {
+  --background: #56E4B5; /* Cor de fundo da barra de ferramentas */
+  --color: white; /* Cor do texto na barra de ferramentas */
+}
+
+ion-avatar img {
+  border-radius: 50%; /* Tornar a imagem do avatar redonda */
+  width: 50px; /* Largura do avatar */
+  height: 50px; /* Altura do avatar */
+}
+
+.menu-icon {
+  color: #56E4B5; /* Cor dos ícones do menu */
+}
+
+/* Estilos para os ícones ao serem ativados */
+ion-item .menu-icon.activated {
+  color: #ff5733; /* Cor dos ícones quando o item está ativado */
+}
+
+/* global.scss */
+:root {
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-background-color: #ffffff; /* Cor de fundo clara */
+  --ion-text-color: #000000; /* Cor de texto clara */
+}
+
+.dark {
+  --ion-background-color: #222428; /* Cor de fundo escura */
+  --ion-text-color: #ffffff; /* Cor de texto escura */
+  --ion-color-primary: #f39c12; /* Cor primária escura */
+}
